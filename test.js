@@ -3,5 +3,5 @@ process.on("uncaughtException", () => {
 });
 
 process.nextTick(() => {
-    throw new Error("My error.");
+    throw new Error();
 });
