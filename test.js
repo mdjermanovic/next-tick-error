@@ -3,5 +3,7 @@ process.on("uncaughtException", () => {
 });
 
 process.nextTick(() => {
-    throw new Error();
+    const error = new Error();
+    error.stack = "test_error_stack";
+    throw error;
 });
